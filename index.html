@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anata</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="btn-feed desktop-tablet">
+        <button class="btnFeed send" onclick="send()">kirim komentar</button>
+        <button class="btnFeed show" onclick="show()">tampilkan komentar</button>
+    </div>
+    <div class="kalenderJam">
+        <div class="jam">
+            <span class="hours">00</span>
+            <span class="colon">:</span>
+            <span class="menit">00</span>
+        </div>
+        <div class="kalender">
+            <span class="hari">senin</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-hari">00</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-bulan">00</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-tahun">0000</span>
+        </div>
+        <div class="btn-feed mobile">
+            <button class="btnFeed send" onclick="send()">kirim komentar</button>
+            <button class="btnFeed show" onclick="show()">tampilkan komentar</button>
+        </div>
+    </div>
+    <div class="contentGate">
+        <div id="cG">
+
+        </div>
+        <h2 id="f1"></h2>
+
+        <div class="send-feedback hide">
+            <h2>komentar anda</h2>
+            <form action="" method="post" class="form">
+                <input type="text" id="nama" name="nama" placeholder="Tulis Nama" class="nama">
+                <input type="number" id="nilai" name="nilai" placeholder="Beri Nilai 1-10" class="nilai">
+                <textarea name="komentar" id="komentar" placeholder="Beri Komentar" class="komentar"></textarea>
+
+                <button type="submit" class="btnFeed" onclick="kirim()">kirim</button>
+            </form>
+            <button class="btnFeed cencel" onclick="cencel()">cencel</button>
+        </div>
+
+        <div class="show-feed hide">
+            <i class='bx bx-x' onclick="closefeed()"></i>
+            <div class="org-feed">
+                <div class="card-feed">
+                    <h2>nama</h2>
+                    <h3>nilai</h3>
+                    <p>komen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp" id="cp">
+        <div id="profil" class="content-profil">
+            <img src="logoProfile.jpg" alt="">
+            <div class="namaHoby">
+                <h3>aldo natanael sihaloho</h3>
+                <p>main game, program, design, sepak bola</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ck" id="ck">
+        <div id="koleksi" class="content-koleksi">
+            <h2>koleksi ku</h2>
+            <div id="btnList" class="kategori">
+                <h3 class="list active" onclick="filterSelection('all')">all</h3>
+                <h3 class="list" onclick="filterSelection('logo')">logo</h3>
+                <h3 class="list" onclick="filterSelection('web')">web</h3>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+                <div class="filterDiv logo">
+                    <img src="mount-fuji-shaved-ice.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainGate">
+        <div class="gate">
+            <div class="btn dayNight">
+                <i class='bx bxs-moon'></i>
+                <i class='bx bxs-sun'></i>
+                <div class="btnText">
+                    <h3>mode gelap</h3>
+                    <h3>mode terang</h3>
+                </div>
+            </div>
+            <div class="btn koleksi">
+                <i class='bx bxs-bookmarks'></i>
+                <div class="btnText">
+                    <h3>koleksi</h3>
+                </div>
+            </div>
+            <div class="btn profil">
+                <i class='bx bxs-user-circle'></i>
+                <div class="btnText">
+                    <h3>profil</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="gate.js"></script>
+<script src="kalenderTime.js"></script>
+<script src="collection.js"></script>
+<script src="feedback.js"></script>
+
+</html>
